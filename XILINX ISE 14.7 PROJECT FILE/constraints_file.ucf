@@ -1,0 +1,29 @@
+
+CONFIG VCCAUX = "3.3" ;
+
+   NET "i_clk"      LOC = V10 | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz;
+	
+	
+	/////********clear input*************////
+	  NET "clr"           LOC = M18   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+	
+	//**********used for inputs *************////
+	NET "in[0]"         LOC = E18  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    NET "in[1]"         LOC = E16  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    NET "in[2]"         LOC = F18  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    NET "in[3]"         LOC = F17  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;
+
+///**********serial in for right_shift *********/// 
+    NET "sr"         LOC = D17  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+	 //**********serial in for left shift **********///
+    NET "sl"         LOC = D18  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 	 
+	 ///*******used for selecting the operation (select lines) *************////
+	 NET "sel_MUX[1]"         LOC = C17  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;
+    NET "sel_MUX[0]"         LOC = C18  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;
+	 
+	 ///*******outputs************/////
+	 
+	  NET "q_out[0]"              LOC = P15  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "q_out[1]"              LOC = P16  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "q_out[2]"              LOC = N15  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "q_out[3]"              LOC = N16  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
