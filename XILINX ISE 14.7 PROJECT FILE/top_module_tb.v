@@ -31,7 +31,7 @@ reg [DATA_WIDTH-1:0] in ;
 wire  [DATA_WIDTH-1:0] q_out ;
 reg [DATA_WIDTH1-1:0] sel_mux ;
 
-top_module DUT (
+top DUT (
 i_clk ,
 clr ,
 in ,
